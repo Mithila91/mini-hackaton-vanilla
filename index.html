@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mars Rover Explorer</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="light-mode">
+    <div class="theme-toggle">
+        <label class="switch">
+            <input type="checkbox" id="themeToggle">
+            <span class="slider"></span>
+        </label>
+        <span class="toggle-label">Toggle Dark/Light Mode</span>
+    </div>
+
+    <main class="container">   
+     
+        <h1 id="roverTitle">Mars Rover Photos</h1>
+        
+        <div class="image-container">
+            <img id="roverImage" src="" alt="Mars Rover Image">
+        </div>
+
+        <div class="navigation">
+            <button id="prevButton" class="nav-button">Previous</button>
+            <button id="nextButton" class="nav-button">Next</button>
+        </div>
+
+
+        <div class="info-box" id="photoInfo">
+            <div id="loadingSpinner" class="spinner" style="display: none;"></div>
+            Loading rover information...
+        </div>
+
+        <div class="controls">
+            <label for="roverSelect">Select Rover:</label>
+            <select id="roverSelect">
+                <option value="curiosity">Curiosity</option>
+                <option value="opportunity">Opportunity</option>
+                <option value="spirit">Spirit</option>
+            </select>
+
+            <label for="solInput">Sol:</label>
+            <input type="number" id="solInput" min="0" value="1000">
+
+            <button id="fetchButton">Fetch Photos</button>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
